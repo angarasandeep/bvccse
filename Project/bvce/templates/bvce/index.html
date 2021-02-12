@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>BVCEC-CSE</title>
+
+    <!--bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!--bootstap js-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--style css-->
+    <style>
+              body {
+            background-color: #EAF3FA;
+        }
+
+        .h-img {
+            width: 100%;
+            
+        }
+        .btn {
+            width: 180px; 
+            background-color: #e9ebf0;
+            color: black;
+            padding: 10px 20px;
+            font-size: 24px;
+        } 
+
+        .dropdown-toggle {
+            background-color: #FA9746;
+            color: white;
+            margin-right: 20px;
+        }
+        .dropdown-toggle:hover {
+            background-color: white;
+            border:2px solid #FA9746;
+        }
+
+        .dropdown-item:hover {
+            background-color: #FA9746;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        
+  
+       .mid {
+           background-image: url("tech.jpg");
+           background-size: cover;
+           height: 100%;
+       }
+
+   
+       
+       p {
+            font-size: 200%;
+        }
+      
+      .top-div {
+          margin: 5px;
+      }
+      .dept-head {
+          margin: 30px;
+          color: navy;
+          padding: 15px;
+          
+      }
+      #syll {
+          /* margin: 5px; */
+          padding-left: 25px;
+          
+      }
+
+      #tb {
+          /* margin: 5px; */
+
+          padding-right: 25px;
+      }
+
+      .foot {
+          background-color: #2e5372;
+          height: 50px;
+          color: white;
+          
+      }
+      .foot-note {
+          color: white;
+          padding-top: 10px;
+          
+      }
+      .para {
+          text-align: justify;
+      }
+      #sub-head {
+          text-align: center;
+          color:#FA9746;
+      }
+
+      h6 {
+          /* padding-bottom: 80px; */
+          text-align: right;
+        }
+
+
+    .foot-note1 {
+        position: relative;
+        bottom: 30px;
+        float: right;
+        padding-right: 10px;
+        color: white;
+    }
+   
+
+      .clg {
+          
+          width: 100%;
+      }
+    
+    
+     
+ 
+      .cp {
+          text-align: center;
+      }
+      .card {
+         
+          border: none;
+      }
+
+      .sit {
+        width:500px;
+   
+      }
+      
+
+    </style>
+
+  </head>
+
+  <body>
+
+
+    <h5 class="dept-head display-4"> <strong> Department Of Computer Science, BVCEC </strong></h5>
+    <div class="top-div">
+
+        <img src="/static/images/6661.jpg" class="img-fluid h-img">
+        
+    </div>
+
+   <ul style="list-style: none;">
+        <li class="syll">
+            <div class="dropdown float-left">
+                <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Syllabus
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="firstyr_sems.html">First Year</a>
+                  <a class="dropdown-item" href="secondyr_sems.html">Second Year</a>
+                  <a class="dropdown-item" href="thirdyr_sems.html">Third Year</a>
+                  <a class="dropdown-item" href="fourthyr_sems.html">Fourth Year</a>
+                </div>
+              </div>
+
+        </li>
+        
+        <li class="tb">
+            <div class="dropdown float-right">
+                <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Text Books
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="tb/1st year.html">First Year</a>
+                  <a class="dropdown-item" href="tb/2nd year.html">Second Year</a>
+                  <a class="dropdown-item" href="tb/3rd year.html">Third Year</a>
+                  <a class="dropdown-item" href="tb/4th year.html">Fourth Year</a>
+                </div>
+              </div>
+
+        </li>
+        
+    </ul>
+    <br>
+    <br>
+    <hr>    
+
+    <div class="container">
+        <h2 id="sub-head"> About </h2>
+        <p class="para">A onestop destination for computer science students of BVC Group. Syllabus papers, Recommended textbooks can be easily accessed and downloaded.</p>
+    </div>
+    <br>
+    <div class="container">
+        <h2 id="sub-head"> Department </h2>
+        <p class="para">Computer Engineering is one of the most promising branch that deals with design of  hardware, software and communications systems The primary objective of the Computer Engineering program is to prepare graduates to pursue careers related to Software Development, Testing, Network Administration, Database Administrator. It emphasizes on latest technology skills required for entry level professionals in computer industry, including systems analysis and design. The students are also trained on various application of IOT, Embedded System, use of open source software, developing Apps, Developing Games and other application of Data Science, Ethical hacking, BigData etc.</p>
+    </div>
+
+
+
+
+    <div>
+        <img src="/static/images/clg.png" class="img-fluid clg">
+    </div>
+
+
+
+    <div class="container-fluid foot">
+      
+        <h4 class="foot-note"><small>For any queries mail us at : bvcecse@gmail.com</small></h4> 
+        <a href="https://forms.gle/XGmm9Ncyk7V3MBrA7" style="text-decoration: none;" class="foot-note1">FEEDBACK</a> 
+        
+    </div >
+</body>
+</html>
