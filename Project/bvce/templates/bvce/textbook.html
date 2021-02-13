@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>textbooks</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="1st year.css" rel="stylesheet">
+        <style>
+            body {
+                background-image:linear-gradient(to right,#43c6ac, #f8ffae);
+            }
+
+            .container {
+                padding-top:10px;
+                padding-bottom:10px;
+                max-width:1200px;
+                margin-top:30px;
+                margin-bottom:30px;
+            }
+
+            .kit {
+                padding-top:20px;
+                padding-bottom: 20px;
+            }
+
+            .card {
+                height:450px;
+            }
+
+            .card body {
+                height:50%;
+            }
+
+            .card-img-top {
+                height:50%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--"kit" class is defined by me-->
+        <div class="container">
+            <div class="row">
+                {% for i in textbooks %}
+                <div class="col-sm-6 col-md-4 col-lg-3 kit">
+                    <div class="card">
+                        <img src="{{i.image}}" class="card-img-top img-fluid img-thumbnail">
+                        <div class="card-body">
+                        <h5 class="card-title">{{i.title}}</h5>
+                        <p class="card-text">{{i.description}}</p>
+                        <a href="{{i.link}}">pdf</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </body>
+</html>

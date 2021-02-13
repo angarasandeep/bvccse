@@ -180,10 +180,9 @@
                 </a>
               
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="tb/1st year.html">First Year</a>
-                  <a class="dropdown-item" href="tb/2nd year.html">Second Year</a>
-                  <a class="dropdown-item" href="tb/3rd year.html">Third Year</a>
-                  <a class="dropdown-item" href="tb/4th year.html">Fourth Year</a>
+                    {% for i in year %}
+                        <a class="dropdown-item" href="{% url 'textbook' i.id %}">{{i.name}}year</a>
+                    {% endfor %}
                 </div>
               </div>
 
