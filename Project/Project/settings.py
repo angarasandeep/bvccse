@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -21,6 +21,12 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '0_($jwawvmgzv1bg_r9*7)-l822jk1a53i3^-eml94qq47js08'
+
+
+
+MEDIA_ROOT= os.path.join(BASE_DIR, 'static/images/')
+MEDIA_URL= "/static/media/images/"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -63,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -117,7 +124,7 @@ USE_TZ = True
 
 import os
 MEDIA_ROOT= os.path.join(BASE_DIR,'static/images')
-MEDIA_URL='/images/'
+MEDIA_URL='static/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

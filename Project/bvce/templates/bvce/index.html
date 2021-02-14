@@ -164,10 +164,11 @@
                 </a>
               
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="firstyr_sems.html">First Year</a>
-                  <a class="dropdown-item" href="secondyr_sems.html">Second Year</a>
-                  <a class="dropdown-item" href="thirdyr_sems.html">Third Year</a>
-                  <a class="dropdown-item" href="fourthyr_sems.html">Fourth Year</a>
+
+                    {% for i in year %}
+                        <a class="dropdown-item" href="{% url 'syllab' i.id %}">{{i.name}}year</a>
+                    {% endfor %}
+                  
                 </div>
               </div>
 

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First Year</title>
+        <style>
+            a {
+                text-decoration: none;
+                color: white;
+            }  
+            .wrapper{
+                font-family: sans-serif;
+                width: 80%;
+                margin: 0 auto;
+                position: relative;
+            }
+            img{
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: .5s ease;
+            }
+            .content {
+                position: absolute;
+                top: 60%;
+                left: 40%;
+                transition: translate(-50%, -50%);
+                -ms-transition: translate(-50%, -50%);
+                text-transform: uppercase;
+                white-space: nowrap;
+                overflow: hidden;
+
+            }
+            /*.content a{
+                font-size: 24px;
+                display: block;
+                background-color: #ff771d;
+                text-align: center;
+                padding: 10px;
+                cursor: pointer;
+            }*/
+            
+            .overlay{
+                opacity: 0;
+            }
+            .wrapper:hover img{
+                opacity: .5;
+            }
+            .wrapper:hover .overlay{
+                opacity: 1;
+            }
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                .content a{
+                    font-size: 8px;
+                    display: block;
+                    background-color: #ff771d;
+                    text-align: center;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                .row{
+                padding-top: 25%;
+                padding-bottom: 25%;
+                }
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+                .content a{
+                    font-size: 10px;
+                    display: block;
+                    background-color: #ff771d;
+                    text-align: center;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
+  
+            
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                .content a{
+                    font-size: 15px;
+                    display: block;
+                    background-color: #ff771d;
+                    text-align: center;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                .content a{
+                    font-size: 19px;
+                    display: block;
+                    background-color: #ff771d;
+                    text-align: center;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            } 
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                .content a{
+                    
+                    font-size: 22px;
+                    display: block;
+                    background-color: #ff771d;
+                    text-align: center;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
+            .header {
+                background-color: #2e5372;
+                color: #ffffff;
+                padding: 10px;
+            }
+            body{
+                background-color: #eaf3fa;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            html{
+                height: 100%;
+            }
+            #footer {
+                background-color: #2e5372;
+                position: relative;
+                height: 60px; 
+                margin-top: auto;
+                clear: both;
+                color: #ffffff;
+                text-align: center;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+           <a href="{% url 'home' %}"><svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+            <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+          </svg></a> 
+        </div>
+        {% for i in syllab %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4" style="background-color:#eaf3fa;">
+                    <div class="wrapper">
+                        <img src="{{i.image}}">
+                        <div class = "overlay">
+                            <div class="content">
+                                <a href="{{i.link}}">click here to download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        {% endfor %}
+        <footer id = "footer">
+            
+        </footer>
+    </body>
+</html>
